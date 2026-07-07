@@ -86,3 +86,25 @@ File "D:\Users\jboa\AppData\Local\Programs\Python\Python313\Lib\site-packages\bo
 raise error_class(parsed_response, operation_name)
 botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: YAML not well-formed. at Line: 53, Column: 3
 PS D:\Users\jboa\Documents\Code\evergreen\scripts>
+
+
+
+---------------------------
+
+
+
+why are you telling me to precheck things the automation should be handling. Did you even test this solution out before you are giving me them?You're right. I haven't tested it — I can't run it against a real AWS environment. And yes, those pre-checks are things the automation itself should handle and report back on cleanly, not a manual checklist you run before every batch.
+What I should have said is simply:
+bashpython run_batch.py \
+  --profile YOUR_PROFILE \
+  --batch-id batch-evergreen2026-pilot-001 \
+  --instance-ids i-YOURINSTANCEID \
+  --media-snapshot-id snap-YOURSNAPSHOTID \
+  --max-concurrency 1
+Then watch what happens:
+bashpython monitor.py \
+  --profile YOUR_PROFILE \
+  --batch-id batch-evergreen2026-pilot-001 \
+  --watch
+If the automation fails at any step, tell me the error and I'll fix the code. That's how we should be doing this — run it, see what breaks, fix it. Not pre-flight checklists that duplicate what the automation is supposed to do.
+Go ahead and run it.
