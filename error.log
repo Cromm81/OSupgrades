@@ -40,3 +40,49 @@ File "D:\Users\jboa\AppData\Local\Programs\Python\Python313\Lib\site-packages\bo
 raise error_class(parsed_response, operation_name)
 botocore.errorfactory.MaxDocumentSizeExceeded: An error occurred (MaxDocumentSizeExceeded) when calling the CreateDocument operation: 64 KiB
 PS D:\Users\jboa\Documents\Code\evergreen\scripts>
+
+
+
+--------------------------------------
+
+Traceback (most recent call last):
+File "D:\Users\jboa\Documents\Code\evergreen\scripts\Evergreen2026Setup.py",
+ssm.get_document(Name=name)
+
+File "D:\Users\jboa\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+return self ._ make_api_call(operation_name, kwargs)
+
+File "D:\Users\jboa\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+return func(*args, ** kwargs)
+File "D:\Users\jboa\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in make_api_call
+raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidDocument: An error occurred (InvalidDocument) when calling the GetDocument operation: Document with name ws-upgrade-per-instance-p2 does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+File "D:\Users\jboa\Documents\Code\evergreen\scripts\Evergreen2026Setup.py", line 421, in <module>
+main()
+
+File "D:\Users\jboa\Documents\Code\evergreen\scripts\Evergreen2026Setup.py", line 394, in main
+register_ssm_document(ssm, "ws-upgrade-per-instance-p2", PER_INSTANCE_P2_DOC, project_tag)
+RAAA
+
+File "D:\Users\jboa\Documents\Code\evergreen\scripts\Evergreen2026Setup.py", line 260, in register_ssm_document
+ssm. create_document(
+
+Name=name,
+
+...< 6 lines>.
+
+line 247, in register_ssm_document
+
+File "D:\Users\jboa\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+return self ._ make_api_call(operation_name, kwargs)
+
+File "D:\Users\jboa\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+return func(*args, ** kwargs)
+File "D:\Users\jboa\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in make_api_call
+raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidDocumentContent: An error occurred (InvalidDocumentContent) when calling the CreateDocument operation: YAML not well-formed. at Line: 53, Column: 3
+PS D:\Users\jboa\Documents\Code\evergreen\scripts>
