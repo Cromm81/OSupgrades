@@ -273,3 +273,54 @@ WriteStateAssessmentFailed
 WriteStatePrevalidationFailed
 
 CreateSnapshots
+
+Step name
+
+TriggerUpgrade
+
+DetachMediaVolumeOnFailure
+
+WaitForMediaVolumeDetachedOnFailure
+
+DeleteMediaVolumeOnFailure
+
+WriteStateUpgradeLaunchFailed
+
+Action
+
+aws:runCommand
+
+Status
+
+Failed
+
+x
+
+aws:executeAwsApi
+
+aws:waitForAwsResourceProperty
+
+aws:executeAwsApi
+
+aws:executeScript
+
+Failed
+
+x
+
+Failed
+
+Failed
+
+Success
+
+VerincationErrorMessage
+Command a0ba2f4c-b347-493d-bb2f-dea6f1700d3c returns unexpected invocation result:
+{Status=[Failed], ResponseCode=[1], Output=[UPGRADE_MEDIA_NOT_FOUND: Resolved path was ''
+
+-- ERROR --
+failed to run commands: exit status 1], OutputPayload=[{"Status":"Failed", "ResponseCode":1, "Output": "UPGRADE_MEDIA_NOT_FOUND: Resolved path was \u0027\u0027
+
+-ERROR --
+failed to run commands: exit status 1", "CommandId":"a@ba2f4c-b347-493d-bb2f-dea6f1700d3c"}], CommandId=[a0ba2f4c-b347-493d-bb2f-dea6f1700d3c]}
+
