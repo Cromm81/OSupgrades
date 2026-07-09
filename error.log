@@ -324,3 +324,21 @@ failed to run commands: exit status 1], OutputPayload=[{"Status":"Failed", "Resp
 -ERROR --
 failed to run commands: exit status 1", "CommandId":"a@ba2f4c-b347-493d-bb2f-dea6f1700d3c"}], CommandId=[a0ba2f4c-b347-493d-bb2f-dea6f1700d3c]}
 
+Outputs
+
+ExecutedRuntime
+
+python3.11
+
+MediaVolumeld
+
+vol-0063555045345076c
+
+ScriptExecutionld
+9959e736-5282-46db-94a1-dd43a3a5fa72
+
+IsRuntimeAutoUpgraded
+false
+
+OutputPayload
+{"Payload":{"media_volume_id":"vol-0063555045345076c"}}
