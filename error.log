@@ -342,3 +342,29 @@ false
 
 OutputPayload
 {"Payload":{"media_volume_id":"vol-0063555045345076c"}}
+
+
+FailureType
+Verification
+
+VerificationErrorMessage
+Traceback (most recent call last):
+
+File "/tmp/c668c077-b834-4b0c-b8ca-f6d5a0c54e31-2026-07-09-19-27-48/customer_script.py", line 43, in script_handler
+waiter.wait(
+
+File "/var/lang/lib/python3.11/site-packages/botocore/waiter.py", line 58, in wait
+Waiter.wait(self, ** kwargs)
+
+File "/var/lang/lib/python3.11/site-packages/botocore/context.py", line 123, in wrapper
+return func(*args, ** kwargs)
+
+FailureStage
+PostVerification
+
+File "/var/lang/lib/python3.11/site-packages/botocore/waiter.py", line 363, in wait
+raise WaiterError(
+
+botocore.exceptions.WaiterError: Waiter VolumeAvailable failed: An error occurred (InvalidVolume.NotFound): The volume 'vol-0f09ae963cc928854' does not exist.
+
+WaiterError - Waiter VolumeAvailable failed: An error occurred (InvalidVolume. NotFound): The volume 'vol-0f09ae963cc928854' does not exist.
