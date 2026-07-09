@@ -252,4 +252,24 @@ AWS-RunPowerShellScript
 AWS-RunPowerShellScript
 
 AWS-RunPowerShellScript
+Step name
 
+ValidateEC2Running
+
+ValidateSSMOnline
+
+GetInstanceDetails
+
+WriteStateLoaded
+
+RunAssessment
+
+EvaluateAssessment
+
+AssessmentPassed
+
+WriteStateAssessmentFailed
+
+WriteStatePrevalidationFailed
+
+CreateSnapshots
