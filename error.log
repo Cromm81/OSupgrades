@@ -108,3 +108,27 @@ bashpython monitor.py \
   --watch
 If the automation fails at any step, tell me the error and I'll fix the code. That's how we should be doing this — run it, see what breaks, fix it. Not pre-flight checklists that duplicate what the automation is supposed to do.
 Go ahead and run it.
+
+------------------------------------
+
+
+OutputPayload
+{"ExecutionLog":"Failed to start i-id: An error occurred (InvalidAutomationExecutionParametersException) when calling the StartAutomationExecution operation: Undefined execution inputs: [UpgradeTimeoutMinutes].
+","Payload":{"started_count":0,"skipped_count":1,"eligible_count":1}}
+
+
+Batch: batch-evergreen2026-TestBatch
+
+Manifest
+Mode
+Resolved
+Eligible : 1
+
+Instance Status
+
+No state files found yet.
+
+Next refresh in 60s - Ctrl+C to stop
+
+: ByInstanceList
+: 1
