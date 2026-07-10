@@ -368,3 +368,43 @@ raise WaiterError(
 botocore.exceptions.WaiterError: Waiter VolumeAvailable failed: An error occurred (InvalidVolume.NotFound): The volume 'vol-0f09ae963cc928854' does not exist.
 
 WaiterError - Waiter VolumeAvailable failed: An error occurred (InvalidVolume. NotFound): The volume 'vol-0f09ae963cc928854' does not exist.
+
+
+step 15 results 
+Commandld
+
+Oc4e3ec7-939c-492e-af65-9df4ab1547817
+
+Status
+
+Success
+
+Output
+SETUP_PATH:D: \setup.exe
+UPGRADE_STARTING:2026-07-09T22:37:53.7691512+00:00
+UPGRADE_TASK_REGISTERED:2026-07-09T22:37:54.1794438+00:00
+
+OutputPayload
+{"Status":"Success", "ResponseCode":0, "Output":"SETUP_PATH:D:\\setup. exe
+
+UPGRADE_STARTING:2026-07-09T22:37:53.7691512+00:00
+
+UPGRADE_TASK_REGISTERED:2026-07-09T22:37:54.1794438+00:00
+
+", "CommandId":"0c4e3ec7-939c-492e-af65-9df4ab154781"}
+
+step 16 results 
+Outputs
+
+ExecutedRuntime
+python3.11
+
+ScriptExecutionld
+0797a8d9-3daa-4da8-830a-f0dcfb7a8b7a
+
+OutputPayload
+{"ExecutionLog":"P2 execution started: ef2ca36e-56ac-4663-b3d0-358485eca75b
+","Payload":{"p2_execution_id":"ef2ca36e-56ac-4663-b3d0-358485eca75b"}}
+
+IsRuntimeAutoUpgraded
+false
