@@ -1,0 +1,58 @@
+import boto3
+from datetime import timezone
+
+REGION = "ca-central-1"  # change if needed
+
+def get_tag_value(tags, key):
+    if not tags:
+        return ""
+    return next((t["Value"] for t in tags if t["Key"] == key), "")
+
+def show_snapshots_for_volume(volume_id):
+    ec2 = boto3.client("ec2", region_name=REGION)
+
+    paginator = ec2.get_paginator("describe_snapshots")
+
+    snapshots = []
+
+    for page in paginator.paginate(
+        OwnerIds=["self"],
+        Filters=[
+            {
+                "Name": "volume-id",
+                "Values": [volume_id]
+            }
+        ]
+    ):
+        snapshots.extend(page.get("Snapshots", []))
+
+    if not snapshots:
+        print(f"No snapshots found for volume: {volume_id}")
+        return
+
+    snapshots.sort(key=lambda x: x["StartTime"], reverse=True)
+
+    print(f"\nSnapshots for volume: {volume_id}")
+    print("-" * 140)
+
+    for snap in snapshots:
+        start_time = snap["StartTime"].astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+
+        print(f"Snapshot ID:        {snap.get('SnapshotId')}")
+        print(f"Name Tag:           {get_tag_value(snap.get('Tags'), 'Name')}")
+        print(f"Description:        {snap.get('Description', '')}")
+        print(f"Volume ID:          {snap.get('VolumeId')}")
+        print(f"Volume Size:        {snap.get('VolumeSize')} GiB")
+        print(f"State:              {snap.get('State')}")
+        print(f"Progress:           {snap.get('Progress', '')}")
+        print(f"Encrypted:          {snap.get('Encrypted')}")
+        print(f"KMS Key ID:         {snap.get('KmsKeyId', '')}")
+        print(f"Owner ID:           {snap.get('OwnerId')}")
+        print(f"Started:            {start_time}")
+        print(f"Storage Tier:       {snap.get('StorageTier', '')}")
+        print(f"Tags:               {snap.get('Tags', [])}")
+        print("-" * 140)
+
+if __name__ == "__main__":
+    volume_id = input("Enter EBS volume/disk ID, example vol-0123456789abcdef0: ").strip()
+    show_snapshots_for_volume(volume_id)
