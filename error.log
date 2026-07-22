@@ -433,3 +433,47 @@ Disk 3: Online 8GB Disk 0: Online 80GB Disk 2: Online 30GB Disk 1: Online 50GB P
 ERROR ------- failed to run commands: exit status 1], OutputPayload=[{"Status":"Failed","ResponseCode":1,"Output":"SETUP_NOT_FOUND - Z: contents:\r\nDisk 3: Online 8GB\r\nDisk 0: Online 80GB\r\nDisk 2: Online 30GB\r\nDisk 1:
 Online 50GB\r\nPart 3/1: Letter\u003d\u0000\r\nPart 3/2: Letter\u003d\u0000\r\nPart 0/1: Letter\u003dC\r\nPart 0/2: Letter\u003d\u0000\r\nPart 2/1: Letter\u003d\u0000\r\nPart 2/2: Letter\u003dP\r\nPart 1/1:
 Letter\u003d\u0000\r\nPart 1/2: Letter\u003d\u0000\r\n\n ---------- ERROR ------- \nfailed to run commands: exit status 1 ...
+
+
+Failure message
+Step fails when it is verifying the command has completed. Command 2829f59c-da08-4be2-80c5-32ad48a3bf2b returns unexpected invocation result: {Status=[Failed], ResponseCode=[1], Output=[Brought disk 3 online Media disk: 4
+size=8GB Assigned Z: to disk 4 partition 1 SETUP_NOT_FOUND - Z: contents: Disk 4: Online 8GB Disk 0: Online 80GB Disk 2: Online 30GB Disk 1: Online 50GB Part 4/1: Letter=Z Part 4/2: Letter= Part 0/1: Letter=C Part 0/2: Letter= Part
+2/1: Letter= Part 2/2: Letter=P Part 1/1: Letter= Part 1/2: Letter= ---------- ERROR ------- Set-Disk : Failed Activity ID: {6970e40f-2e07-46c5-bd44-69568f72d4a6} At C:
+\ProgramData\Amazon\SSM\InstanceData\i-031c90567de1d9783\document\orchestration\2829f59c-da08-4be2-80c5-32ad48a3bf 2b\awsrunPowerShellScript\O.awsrunPowerShellScript\_script.ps1:5 char:5 + Set-Disk -Number
+$ _. Number -IsOffline $false + ~
+
++ CategoryInfo : NotSpecified: (StorageWMI:ROOT/Microsoft/ ..._ StorageC ...
+
+FailureType
+Verification
+
+VerificationErrorMessage
+Command 2829f59c-da08-4be2-80c5-32ad48a3bf2b returns unexpected invocation result:
+[Status=[Failed], ResponseCode=[1], Output=[Brought disk 3 online
+Media disk: 4 size=8GB
+Assigned Z: to disk 4 partition 1
+SETUP_NOT_FOUND - Z: contents:
+Disk 4: Online 8GB
+Disk 0: Online 80GB
+Disk 2: Online 30GB
+Disk 1: Online 50GB
+Part 4/1: Letter=Z
+Part 4/2: Letter=
+Part 0/1: Letter=C
+Part 0/2: Letter=
+Part 2/1: Letter=
+Part 2/2: Letter=P
+Part 1/1: Letter=
+Part 1/2: Letter=
+
+--- ERROR-
+Set-Disk : Failed
+Activity ID: {6970e40f-2e07-46c5-bd44-69568f72d4a6}
+At C:\ProgramData\Amazon\SSM\InstanceData\i-031c90567de1d9783\document\orchestration\2829f59c-da08-4be2-80c5-32ad48a3bf
+2b\awsrunPowerShellScript\0.awsrunPowerShellScript\_script.ps1:5 char:5
+Set-Disk -Number $ _. Number -IsOffline $false
+
+FailureStage
+PostVerification
+
++
