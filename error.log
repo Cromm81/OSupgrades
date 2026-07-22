@@ -408,3 +408,19 @@ OutputPayload
 
 IsRuntimeAutoUpgraded
 false
+
+
+Failure details
+
+& Failure message
+Step fails when it is validating and resolving the step inputs. Failed to resolve input: EvaluateAssessment.assessment_passed to type Integer or Boolean or String or StringList or StringMap or MapList. assessment_passed is not found in
+the output of action aws:executeScript .. Please refer to Automation Service Troubleshooting Guide for more diagnosis details.
+
+FailureType
+Verification
+
+VerificationErrorMessage
+Failed to resolve input: EvaluateAssessment.assessment_passed to type Integer or Boolean or String or StringList or StringMap or MapList. assessment_passed is not found in the output of action aws:executeScript.
+
+FailureStage
+InputValidation
