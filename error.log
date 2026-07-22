@@ -424,3 +424,12 @@ Failed to resolve input: EvaluateAssessment.assessment_passed to type Integer or
 
 FailureStage
 InputValidation
+
+
+
+& Failure message
+Step fails when it is verifying the command has completed. Command d01cf75e-a8a7-4ab2-a708-6751bb1ea4b1 returns unexpected invocation result: {Status=[Failed], ResponseCode=[1], Output=[SETUP_NOT_FOUND - Z: contents:
+Disk 3: Online 8GB Disk 0: Online 80GB Disk 2: Online 30GB Disk 1: Online 50GB Part 3/1: Letter= Part 3/2: Letter= Part 0/1: Letter=C Part 0/2: Letter= Part 2/1: Letter= Part 2/2: Letter=P Part 1/1: Letter= Part 1/2: Letter= -
+ERROR ------- failed to run commands: exit status 1], OutputPayload=[{"Status":"Failed","ResponseCode":1,"Output":"SETUP_NOT_FOUND - Z: contents:\r\nDisk 3: Online 8GB\r\nDisk 0: Online 80GB\r\nDisk 2: Online 30GB\r\nDisk 1:
+Online 50GB\r\nPart 3/1: Letter\u003d\u0000\r\nPart 3/2: Letter\u003d\u0000\r\nPart 0/1: Letter\u003dC\r\nPart 0/2: Letter\u003d\u0000\r\nPart 2/1: Letter\u003d\u0000\r\nPart 2/2: Letter\u003dP\r\nPart 1/1:
+Letter\u003d\u0000\r\nPart 1/2: Letter\u003d\u0000\r\n\n ---------- ERROR ------- \nfailed to run commands: exit status 1 ...
