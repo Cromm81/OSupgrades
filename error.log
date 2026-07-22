@@ -477,3 +477,45 @@ FailureStage
 PostVerification
 
 +
+
+
+Failure message
+Step fails when it is verifying the command has completed. Command 842b948f-29c7-4e4c-802c-ddb26a4325a4 returns unexpected invocation result: {Status=[Failed], ResponseCode=[1], Output=[Brought disk 4 online Media disk: 4
+size=8GB Assigned Z: to disk 4 partition 1 === Z: contents === === Z: recursive depth 2 === SETUP_NOT_FOUND ---------- ERROR ------- failed to run commands: exit status 1],
+OutputPayload=[{"Status":"Failed","ResponseCode":1,"Output":"Brought disk 4 online\r\nMedia disk: 4 size\u003d8GB\r\nAssigned Z: to disk 4 partition 1\r\n\u003d\u003d\u003d Z: contents
+u003u00003003du003d\u003dZ:recursive depth 2\u003d\u003d\u003d\r\nSETUP_NOT_FOUND\r\n\n ---------- ERROR ------- \nfailed to run commands: exit status 1","Commandld":"842b948f-29c7-4e4c-802c-
+ddb26a4325a4"}], Commandld=[842b948f-29c7-4e4c-802c-ddb26a4325a4]}. Please refer to Automation Service Troubleshooting Guide for more diagnosis details.
+
+FailureType
+
+Verification
+
+VerificationErrorMessage
+Command 842b948f-29c7-4e4c-802c-ddb26a4325a4 returns unexpected invocation result:
+{Status=[Failed], ResponseCode=[1], Output=[Brought disk 4 online
+Media disk: 4 size=8GB
+Assigned Z: to disk 4 partition 1
+=== Z: contents ==
+=== Z: recursive depth 2 ===
+SETUP_NOT_FOUND
+
+---- ERROR --.
+failed to run commands: exit status 1], OutputPayload=[{"Status":"Failed", "ResponseCode":1, "Output":"Brought disk 4 online
+
+Media disk: 4 size\u003d8GB
+
+Assigned Z: to disk 4 partition 1
+
+\u003d\u003d\u003d Z: contents\u003d\u003d\u003d
+
+\u003d\u003d\u003d Z: recursive depth 2\u003d\u003d\u003d
+
+SETUP_NOT_FOUND
+
+-- ERROR-
+failed to run commands: exit status 1", "CommandId": "842b948f-29c7-4e4c-802c-ddb26a4325a4"}], CommandId=[842b948f-29c7-4e4c-802c-
+c-802c-ddb26a4325a4]7
+
+FailureStage
+
+PostVerification
